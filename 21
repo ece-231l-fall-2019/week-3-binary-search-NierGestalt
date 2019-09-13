@@ -4,8 +4,8 @@
 bool linearSearch(const std::vector<int>& set, int value)
 {
 
-	unsigned int i;
-	for (i = 0; i < set.size(); i++)
+	int i;
+	for (i = 0, i < set.size(); i++)
 	{
         if (set[i] == value)
 	{
