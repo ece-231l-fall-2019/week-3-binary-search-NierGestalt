@@ -56,29 +56,4 @@ bool binarySearch(const int *begin, const int *end, int value)
 	return false;
 }
 
-bool binSearchRec(const int *begin, const int *end, int value)
-{
-	         const int *mid = begin + (end - begin) / 2;
-
-	if ((begin > end) || (begin == end))
-		{
-		return false;
-
-		}
-                if (*mid == value)
-                {
-                        return true;
-                }
-                if (value > *mid)
-                {
-                        begin = mid + 1;
-                }
-                else
-                {
-                        end = mid;
-                }
-		return false;
-
-
-}
 

@@ -2,7 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
-
+#include "sort.h"
 #include "Timer.h"
 #include "search.h"
 
@@ -20,6 +20,7 @@ void read(std::string filename, std::vector<int>& c)
 	d.close();
 }
 
+
 int main()
 {
 	std::vector<int> numbers;
@@ -30,6 +31,13 @@ int main()
 
 	read("numbers", numbers);
 	read("search", search);
+	
+	bubblesort(search.data(), search.data() + search.size());
+	for (unsigned int i = 0; i < search.size(); i++)
+        {
+		std::cout << search[i] << std::endl;
+        }
+
 
 	// TODO:
 	// read the file "numbers" into the numbers vector
