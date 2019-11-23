@@ -93,6 +93,21 @@ int main()
         }
 
         {
+                Timer timer("Time to binary recursion search all values (pointers): ");
+
+                int found = 0;
+                for (size_t i = 0; i < search.size(); i++)
+                {
+                        if (binSearchRec(numbers.data(), numbers.data() + numbers.size(),
+                                        search[i]))
+                                found++;
+                }
+
+                std::cout << "Found "<< found << "/"
+                        << search.size() << " values." << std::endl;
+        }
+
+	{
                 Timer timer("Time to binary search all values (pointers): ");
 
                 int found = 0;
@@ -106,6 +121,7 @@ int main()
                 std::cout << "Found "<< found << "/"
                         << search.size() << " values." << std::endl;
         }
+
 
 
 	return 0;

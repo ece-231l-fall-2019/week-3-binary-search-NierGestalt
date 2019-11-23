@@ -77,7 +77,7 @@ bool binSearchRec(const int *begin, const int *end, int value)
                 {
                         end = mid;
                 }
-		return false;
+		binSearchRec(begin, end, value);
 
 
 }
